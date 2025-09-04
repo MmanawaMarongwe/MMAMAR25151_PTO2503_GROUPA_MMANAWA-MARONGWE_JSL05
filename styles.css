@@ -80,6 +80,10 @@ img {
   overflow: hidden;
 }
 
+.add-task-icon {
+  display: none; /* hidden on desktop */
+}
+
 .btn-primary {
   position: absolute;
   left: -10%;
@@ -236,6 +240,19 @@ input {
     display: flex;
     align-items: center;
     padding: 30px;
+  }
+
+  /* Show the small '+' in the nav */
+  .add-task-icon {
+    display: inline;
+    color: var(--white);
+    margin-left: 110px;
+    background-color: var(--main-purple);
+    padding: 10px 15px;
+    justify-items: center;
+    margin-top: 15px;
+    border-radius: 75%;
+    border: 1px solid var(--white);
   }
 
   .hidden {
