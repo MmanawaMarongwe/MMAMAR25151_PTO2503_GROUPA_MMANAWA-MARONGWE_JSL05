@@ -27,6 +27,7 @@
               <span
                 ><button
                   class="add-task-icon"
+                  id="add-task"
                   aria-label="Add new task"
                   title="Add new task"
                 >
@@ -47,7 +48,9 @@
             <h2 class="task-grid-header">
               Launch Careers
               <span
-                ><button class="new-task-button">+ Add New Task</button></span
+                ><button class="new-task-button" id="add-task-desktop">
+                  + Add New Task
+                </button></span
               >
             </h2>
           </div>
@@ -101,24 +104,24 @@
                 </select>
               </div>
             </div>
-            <div class="overlay">
-              <div id="add-modal" class="modal">
-                <span class="modal-close">&times;</span>
+            <div class="overlay" id="empty-modal">
+              <div class="new-modal modal">
+                <span class="new-modal-close">&times;</span>
                 <h3 class="modal-header">Task</h3>
-                <label for="task-name-field">Title</label>
-                <input type="text" name="task" id="task-name-field" />
-                <label for="task-description">Description</label>
+                <label for="new-task">Title</label>
+                <input type="text" name="task" id="new-task" />
+                <label for="new-task-description">Description</label>
                 <textarea
                   name="task-description-box"
-                  id="task-description"
+                  id="new-task-description"
                 ></textarea>
-                <label for="task-status">Status</label>
-                <select name="task-status-dropdown" id="task-status">
+                <label for="new-task-status">Status</label>
+                <select name="new-task-status-dropdown" id="new-task-status">
                   <option value="todo">Todo</option>
                   <option value="doing">Doing</option>
                   <option value="done">Done</option>
                 </select>
-                <button>Create Task</button>
+                <button id="create-btn">Create Task</button>
               </div>
             </div>
           </main>
