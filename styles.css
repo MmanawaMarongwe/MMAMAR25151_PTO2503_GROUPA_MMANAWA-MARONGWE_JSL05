@@ -96,8 +96,19 @@ img {
 }
 
 .task-grid-header {
-  padding-top: 20px;
-  margin-left: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 25px;
+}
+
+.new-task-button {
+  position: absolute;
+  left: 85%;
+  color: var(--white);
+  background-color: var(--main-purple);
+  padding: 15px 25px;
+  border-radius: 50px;
+  border: 1px solid var(--white);
 }
 
 .task-grid {
