@@ -1,9 +1,9 @@
-import { renderTasks } from "../modules/userInterface.js";
+import { renderTasks } from "./modules/userInterface.js";
 import {
   OpenEmptyModal,
-  newTaskBtnMobile,
   newTaskBtnDesk,
-} from "../NewTaskModal.js";
+  newTaskBtnMobile,
+} from "./modules/NewTaskModal.js";
 
 renderTasks();
 newTaskBtnMobile.addEventListener("click", OpenEmptyModal);

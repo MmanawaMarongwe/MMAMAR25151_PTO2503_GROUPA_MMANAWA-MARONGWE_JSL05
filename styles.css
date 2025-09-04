@@ -162,7 +162,8 @@ img {
 
 .modal-header,
 input,
-select {
+select,
+.create-button {
   margin: 10px 20px 10px 10px;
 }
 
@@ -179,6 +180,7 @@ select {
   height: auto; /* natural height for a single-line input */
   width: 100%; /* full width */
   text-transform: lowercase;
+  margin-bottom: 15px;
 }
 
 option,
@@ -186,17 +188,28 @@ input {
   text-align: left;
 }
 
-#task-name-field {
+#task-name-field,
+#new-task {
   margin-bottom: 30px;
   padding: 8px 12px; /* comfortable padding inside */
   height: auto; /* natural height for a single-line input */
   width: 100%; /*full width */
 }
 
-#task-description {
+#task-description,
+#new-task-description {
   margin: 10px 0px 30px 10px;
   height: 100px; /* natural height for a single-line input */
   width: 100%;
+}
+
+.create-button {
+  width: 100%;
+  color: var(--white);
+  background-color: var(--main-purple);
+  padding: 10px 75px;
+  border-radius: 50px;
+  border: 1px solid var(--white);
 }
 
 .modal-close {
@@ -215,7 +228,7 @@ input {
 
 .modal {
   background-color: var(--white);
-  width: 500px;
+  width: 400px;
   height: 400px;
   padding: 10px 30px 30px 10px;
   position: absolute;
@@ -266,7 +279,7 @@ input {
   .modal {
     background-color: var(--white);
     width: 280px;
-    height: 375px;
+    height: 400px;
     padding: 10px 30px 30px 10px;
     position: absolute;
     left: 50%;
