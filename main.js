@@ -1,7 +1,3 @@
-import {
-  renderTasks,
-  createTask,
-  arrangeTask,
-} from "../modules/userInterface.js";
+import { renderTasks } from "../modules/userInterface.js";
 
 renderTasks();
