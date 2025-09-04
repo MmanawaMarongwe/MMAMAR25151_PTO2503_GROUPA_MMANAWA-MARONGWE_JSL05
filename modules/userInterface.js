@@ -1,5 +1,6 @@
 import { initialTasks } from "./initialData.js";
 import { displayTaskInModal } from "./ExistingTaskModal.js";
+import { AddNewTask, addTaskBtn } from "./AddNewTask.js";
 
 const TODO_TASKS = document.getElementById("todo-list");
 const DOING_TASKS = document.getElementById("doing-list");
@@ -22,6 +23,10 @@ getTasks();
  * @returns {HTMLDivElement} - The created task card
  */
 export function renderTasks() {
+  document.getElementById("todo-list").innerHTML = "";
+  document.getElementById("doing-list").innerHTML = "";
+  document.getElementById("done-list").innerHTML = "";
+
   initialTasks.forEach((task) => {
     const taskCard = createTask(task);
     console.dir(taskCard);
