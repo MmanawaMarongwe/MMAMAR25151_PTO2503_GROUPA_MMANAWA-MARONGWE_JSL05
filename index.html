@@ -37,6 +37,7 @@
         <header>
           <div class="task-grid-header hidden">
             <h2>Launch Career</h2>
+            <button>Add New Task</button>
           </div>
         </header>
 
@@ -71,6 +72,25 @@
             </div>
             <div class="overlay">
               <div id="task-modal" class="modal">
+                <span class="modal-close">&times;</span>
+                <h3 class="modal-header">Task</h3>
+                <label for="task-name-field">Title</label>
+                <input type="text" name="task" id="task-name-field" />
+                <label for="task-description">Description</label>
+                <textarea
+                  name="task-description-box"
+                  id="task-description"
+                ></textarea>
+                <label for="task-status">Status</label>
+                <select name="task-status-dropdown" id="task-status">
+                  <option value="todo">Todo</option>
+                  <option value="doing">Doing</option>
+                  <option value="done">Done</option>
+                </select>
+              </div>
+            </div>
+            <div class="overlay">
+              <div id="add-modal" class="modal">
                 <span class="modal-close">&times;</span>
                 <h3 class="modal-header">Task</h3>
                 <label for="task-name-field">Title</label>
