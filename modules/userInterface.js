@@ -1,5 +1,6 @@
 import { initialTasks } from "./initialData.js";
 import { displayTaskInModal } from "./ExistingTaskModal.js";
+import { AddNewTask, addTaskBtn } from "./AddNewTask.js";
 
 const TODO_TASKS = document.getElementById("todo-list");
 const DOING_TASKS = document.getElementById("doing-list");

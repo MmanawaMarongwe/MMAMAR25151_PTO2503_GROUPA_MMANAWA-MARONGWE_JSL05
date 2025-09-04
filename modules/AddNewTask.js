@@ -32,5 +32,6 @@ export function AddNewTask() {
   MODAL_STATUS.value = "";
 
   initialTasks.push(newTask);
+  console.log(initialTasks);
   renderTasks();
 }
