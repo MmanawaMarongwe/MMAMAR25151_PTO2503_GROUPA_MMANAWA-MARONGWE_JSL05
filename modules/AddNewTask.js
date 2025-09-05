@@ -1,5 +1,5 @@
 import { initialTasks } from "./initialData.js";
-import { renderTasks, getTasks, tasks } from "./userInterface.js";
+import { renderTasks, tasks } from "./userInterface.js";
 
 const MODAL_TITLE = document.getElementById("new-task");
 const MODAL_DESC = document.getElementById("new-task-description");
@@ -27,6 +27,7 @@ export function AddNewTask() {
     description: newTaskDesc,
     status: newTaskStatus,
   };
+
   MODAL_TITLE.value = "";
   MODAL_DESC.value = "";
   MODAL_STATUS.value = "";
@@ -34,6 +35,4 @@ export function AddNewTask() {
   tasks.push(newTask);
   localStorage.setItem("tasks", JSON.stringify(tasks));
   renderTasks();
-
-  //console.log(initialTasks);
 }
