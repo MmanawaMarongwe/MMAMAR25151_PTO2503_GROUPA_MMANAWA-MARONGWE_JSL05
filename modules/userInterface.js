@@ -1,6 +1,5 @@
 import { initialTasks } from "./initialData.js";
 import { displayTaskInModal } from "./ExistingTaskModal.js";
-import { AddNewTask, addTaskBtn } from "./AddNewTask.js";
 
 const TODO_TASKS = document.getElementById("todo-list");
 const DOING_TASKS = document.getElementById("doing-list");
@@ -11,13 +10,11 @@ if (!localStorage.getItem("tasks")) {
 }
 
 // 2. Always read tasks fresh from localStorage
-function getTasks() {
+export function getTasks() {
   const saved = localStorage.getItem("tasks");
   return saved ? JSON.parse(saved) : [];
 }
-
-getTasks();
-
+export const tasks = getTasks();
 /**
  * Loops through all task objects in the array and renders them on the page
  * @returns {HTMLDivElement} - The created task card
@@ -27,9 +24,8 @@ export function renderTasks() {
   document.getElementById("doing-list").innerHTML = "";
   document.getElementById("done-list").innerHTML = "";
 
-  initialTasks.forEach((task) => {
+  tasks.forEach((task) => {
     const taskCard = createTask(task);
-    console.dir(taskCard);
     arrangeTask(task, taskCard);
     return taskCard;
   });
