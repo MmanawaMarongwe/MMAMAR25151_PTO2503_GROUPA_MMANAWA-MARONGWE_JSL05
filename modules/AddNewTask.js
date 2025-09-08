@@ -49,7 +49,12 @@ export function AddNewTask() {
     status: newTaskStatus,
   };
 
-  tasks.push(newTask);
+  if (!newTaskTitle || !newTaskDesc || !newTaskStatus) {
+    throw new Error("All fields must be filled before adding a task");
+  } else {
+    tasks.push(newTask);
+  }
+
   localStorage.setItem("tasks", JSON.stringify(tasks));
   renderTasks();
   MODAL_TITLE.value = "";
