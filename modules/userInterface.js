@@ -16,6 +16,7 @@ export function getTasks() {
 }
 
 export const tasks = getTasks();
+
 /**
  * Loops through all task objects in the array and renders them on the page
  * @returns {HTMLDivElement} - The created task card

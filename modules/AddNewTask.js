@@ -1,9 +1,9 @@
 import { initialTasks } from "./initialData.js";
 import { renderTasks, tasks } from "./userInterface.js";
 
-const MODAL_TITLE = document.getElementById("new-task");
-const MODAL_DESC = document.getElementById("new-task-description");
-const MODAL_STATUS = document.getElementById("new-task-status");
+const modalTitle = document.getElementById("new-task");
+const modalDesc = document.getElementById("new-task-description");
+const modalStatus = document.getElementById("new-task-status");
 export const addTaskBtn = document.getElementById("create-btn");
 
 /**
@@ -38,9 +38,9 @@ function getNextId() {
  * @returns {void} Does not return a value.
  */
 export function AddNewTask() {
-  let newTaskTitle = MODAL_TITLE.value;
-  let newTaskDesc = MODAL_DESC.value;
-  let newTaskStatus = MODAL_STATUS.value;
+  let newTaskTitle = modalTitle.value;
+  let newTaskDesc = modalDesc.value;
+  let newTaskStatus = modalStatus.value;
 
   let newTask = {
     id: getNextId(),
@@ -57,7 +57,7 @@ export function AddNewTask() {
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
   renderTasks();
-  MODAL_TITLE.value = "";
-  MODAL_DESC.value = "";
-  MODAL_STATUS.value = "";
+  modalTitle.value = "";
+  modalDesc.value = "";
+  modalStatus.value = "";
 }

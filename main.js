@@ -5,7 +5,7 @@ import {
   newTaskBtnDesk,
   newTaskBtnMobile,
   closeModal,
-  MODAL_CLOSE_BTN,
+  modalCloseBtn,
 } from "./modules/NewTaskModal.js";
 
 renderTasks();
@@ -15,4 +15,4 @@ newTaskBtnDesk.addEventListener("click", OpenEmptyModal);
 
 addTaskBtn.addEventListener("click", AddNewTask);
 
-MODAL_CLOSE_BTN.addEventListener("click", closeModal);
+modalCloseBtn.addEventListener("click", closeModal);

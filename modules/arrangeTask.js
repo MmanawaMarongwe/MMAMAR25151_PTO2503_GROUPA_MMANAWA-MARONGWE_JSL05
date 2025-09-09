@@ -1,6 +1,6 @@
-const TODO_TASKS = document.getElementById("todo-list");
-const DOING_TASKS = document.getElementById("doing-list");
-const DONE_TASKS = document.getElementById("done-list");
+const todoTasks = document.getElementById("todo-list");
+const doingTasks = document.getElementById("doing-list");
+const doneTasks = document.getElementById("done-list");
 
 /**
  * Appends the task element into the correct container according to their status (todo/doing/done)
@@ -11,12 +11,12 @@ const DONE_TASKS = document.getElementById("done-list");
  */
 export function arrangeTask(task, taskCard) {
   if (task.status === "done") {
-    DONE_TASKS.appendChild(taskCard);
+    doneTasks.appendChild(taskCard);
   }
   if (task.status === "todo") {
-    TODO_TASKS.appendChild(taskCard);
+    todoTasks.appendChild(taskCard);
   }
   if (task.status === "doing") {
-    DOING_TASKS.appendChild(taskCard);
+    doingTasks.appendChild(taskCard);
   }
 }
