@@ -105,11 +105,17 @@
               </div>
             </div>
             <div class="overlay" id="empty-modal">
-              <div class="new-modal modal">
+              <form class="new-modal modal">
                 <span class="modal-close">&times;</span>
                 <h3 class="modal-header">Task</h3>
                 <label for="new-task">Title</label>
-                <input type="text" name="task" id="new-task" />
+                <input
+                  type="text"
+                  name="task"
+                  id="new-task"
+                  value="e.g Take chilled break"
+                  required
+                />
                 <label for="new-task-description">Description</label>
                 <textarea
                   name="task-description-box"
@@ -124,7 +130,7 @@
                 <button id="create-btn" class="create-button">
                   Create Task
                 </button>
-              </div>
+              </form>
             </div>
           </main>
         </div>
