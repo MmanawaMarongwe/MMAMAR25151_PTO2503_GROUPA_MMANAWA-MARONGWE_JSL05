@@ -57,6 +57,7 @@ export function AddNewTask() {
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
   renderTasks();
+
   modalTitle.value = "";
   modalDesc.value = "";
   modalStatus.value = "";

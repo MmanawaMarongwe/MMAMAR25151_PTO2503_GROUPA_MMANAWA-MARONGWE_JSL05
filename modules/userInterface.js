@@ -1,7 +1,7 @@
 import { initialTasks } from "./initialData.js";
 import { arrangeTask } from "./arrangeTask.js";
 import { createTask } from "./createTask.js";
-
+import { countTasks } from "./taskCounter.js";
 if (!localStorage.getItem("tasks")) {
   localStorage.setItem("tasks", JSON.stringify(initialTasks));
 }
@@ -25,6 +25,7 @@ export function renderTasks() {
   document.getElementById("todo-list").innerHTML = "";
   document.getElementById("doing-list").innerHTML = "";
   document.getElementById("done-list").innerHTML = "";
+  countTasks();
 
   tasks.forEach((task) => {
     const taskCard = createTask(task);

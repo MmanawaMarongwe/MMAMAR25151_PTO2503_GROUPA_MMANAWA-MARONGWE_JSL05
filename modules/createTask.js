@@ -1,4 +1,5 @@
 import { displayTaskInModal } from "./ExistingTaskModal.js";
+import { countTasks } from "./taskCounter.js";
 
 /**
  * Creates the task card with a <p> inside showing the title of the task
@@ -11,6 +12,8 @@ export function createTask(task) {
   const taskTitle = document.createElement("p");
   taskTitle.textContent = task.title;
   taskCard.appendChild(taskTitle);
+  countTasks();
   taskCard.addEventListener("click", () => displayTaskInModal(task));
+
   return taskCard;
 }
