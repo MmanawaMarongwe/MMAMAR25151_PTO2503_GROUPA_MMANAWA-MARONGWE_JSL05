@@ -7,8 +7,12 @@ if (!localStorage.getItem("tasks")) {
 }
 
 /**
+ * Retrieves the list of tasks from localStorage.
+ * If no tasks are found, returns an empty array.
  *
- * @returns {array} - The array of task objects
+ * @function
+ * @returns {array} An array of task objects stored in localStorage,
+ *   or an empty array if none exist.
  */
 export function getTasks() {
   const saved = localStorage.getItem("tasks");
@@ -25,8 +29,6 @@ export function renderTasks() {
   document.getElementById("todo-list").innerHTML = "";
   document.getElementById("doing-list").innerHTML = "";
   document.getElementById("done-list").innerHTML = "";
-  countTasks();
-
   tasks.forEach((task) => {
     const taskCard = createTask(task);
     arrangeTask(task, taskCard);

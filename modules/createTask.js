@@ -2,9 +2,12 @@ import { displayTaskInModal } from "./ExistingTaskModal.js";
 import { countTasks } from "./taskCounter.js";
 
 /**
- * Creates the task card with a <p> inside showing the title of the task
- * @param {{title: string}} task - The task object title value
- * @returns {HTMLDivElement} The created task card
+ * Creates a task card element containing the task title
+ * and sets up an event listener to display the task in a modal.
+ *
+ * @param {object} task -
+ *   The task object containing a title, description and status.
+ * @returns {HTMLDivElement} The created task card element with the title inside a <p>.
  */
 export function createTask(task) {
   const taskCard = document.createElement("div");
@@ -14,6 +17,5 @@ export function createTask(task) {
   taskCard.appendChild(taskTitle);
   countTasks();
   taskCard.addEventListener("click", () => displayTaskInModal(task));
-
   return taskCard;
 }
