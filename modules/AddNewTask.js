@@ -49,11 +49,6 @@ export function AddNewTask() {
     status: newTaskStatus,
   };
 
-  /* if (!newTaskTitle || !newTaskDesc || !newTaskStatus) {
-    throw new Error("All fields must be filled before adding a task");
-  } else {
-    tasks.push(newTask);
-  }*/
   tasks.push(newTask);
   localStorage.setItem("tasks", JSON.stringify(tasks));
   renderTasks();
