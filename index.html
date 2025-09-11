@@ -113,16 +113,22 @@
                   type="text"
                   name="task"
                   id="new-task"
-                  value="e.g Take chilled break"
+                  placeholder="e.g Take chilled break"
                   required
                 />
                 <label for="new-task-description">Description</label>
                 <textarea
                   name="task-description-box"
                   id="new-task-description"
+                  placeholder="e.g. Pet your dog, have a cup of coffee, dance to your favorite song and come back to crush this challenge."
+                  s
                 ></textarea>
                 <label for="new-task-status">Status</label>
-                <select name="new-task-status-dropdown" id="new-task-status">
+                <select
+                  name="new-task-status-dropdown"
+                  id="new-task-status"
+                  value="todo"
+                >
                   <option value="todo">Todo</option>
                   <option value="doing">Doing</option>
                   <option value="done">Done</option>
