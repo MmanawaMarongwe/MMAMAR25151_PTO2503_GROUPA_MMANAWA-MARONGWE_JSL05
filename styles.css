@@ -215,6 +215,7 @@ input {
 .modal-close {
   float: right;
   color: var(--red);
+  cursor: default;
 }
 
 .overlay {
