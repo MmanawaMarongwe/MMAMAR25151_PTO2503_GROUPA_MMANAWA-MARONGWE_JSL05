@@ -1,9 +1,12 @@
 # JSL05 Project Brief: Task Board with Local Storage Persistence and Task Creation
 
-## Prerequisite
+📽️ Overview
 
-1. Before starting this challenge, ensure that you have **correctly populated your DOM elements** as per the solution in JSL04. Additionally, ensure that clicking a task should **open the modal with the relevant task details** as required in the previous challenge.
-2. **Check the project user stories in your student dashboard**, make sure you understand what is required for each feature.
+This project is a Kanban-style task board enhanced with local storage persistence and task creation via a modal.
+Users can add new tasks, which are then stored in local storage and displayed immediately in the appropriate columns (“To Do”, “Doing”, “Done”).
+Even after refreshing the page or reopening the browser, tasks remain available.
+
+The goal was to practice local storage handling, DOM manipulation, modular JavaScript structure, and JSDoc documentation, while ensuring a clean, responsive design aligned with the Figma brief.
 
 ## Overview
 
